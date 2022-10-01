@@ -35,6 +35,7 @@ echo "Downloading and extracting"
 for R in ${!RELEASES2[@]}; do
   URL="${RELEASES2[${R}]}"
   curl -sL "${URL}" -o "rel.json"
+  echo "URL=${URL}"
   unset FILES URLS
   declare -a FILES URLS
   while read NAME; do
