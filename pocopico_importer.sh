@@ -1,4 +1,4 @@
-#!/usr/bin/env bash
+#!/bin/bash
 
 if [ -z "${1}" ]; then
   echo "Use: ${0} <name of extension>"
