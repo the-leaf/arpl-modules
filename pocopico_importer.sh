@@ -25,7 +25,7 @@ for R in ${!RELEASES[@]}; do
     dva3221) PLATFORM="denverton-4.4.180" ;;
   esac
   if [ -n "${PLATFORM}" ]; then
-    if [ ${NUM} -eq 42218 -o ${NUM} -eq 42661 ]; then
+    if [ ${NUM} = "42218" -o ${NUM} = "42661" ]; then
       RELEASES2[${PLATFORM}]="${RELEASES[${R}]}"
     fi
   fi
