@@ -12,6 +12,7 @@ declare -A RELEASES2
 for R in ${!RELEASES[@]}; do
   MODEL=`echo ${R} | cut -d'_' -f1`
   NUM=`echo ${R} | cut -d'_' -f2`
+  echo "MODEL=${MODEL}  NUM=${NUM}"
   PLATFORM=""
   case "${MODEL}" in
     ds3615xs) PLATFORM="bromolow-3.10.108" ;;
