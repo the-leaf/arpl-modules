@@ -1,12 +1,7 @@
 #!/bin/bash
 
-if [ -z "${1}" ]; then
-  echo "Use: ${0} <name of extension>"
-  exit 1;
-fi
-
 echo "Downloading json"
-curl -sLO "https://raw.githubusercontent.com/pocopico/rp-ext/main/${1}/rpext-index.json"
+curl -sLO "https://raw.githubusercontent.com/pocopico/rp-ext/main/rpext-index.json"
 
 echo "Getting releases"
 declare -A RELEASES
