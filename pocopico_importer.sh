@@ -11,7 +11,7 @@ done < <(jq -r '.releases | to_entries | map([.key, .value] | join("=")) | .[]' 
 declare -A RELEASES2
 for R in ${!RELEASES[@]}; do
   MODEL=`echo ${R} | cut -d'_' -f1`
-  NUM=`echo ${R} | cut -d'_' -f2`
+  NUM=`echo ${R} | cut -c'_' -f2`
   PLATFORM=""
   case "${MODEL}" in
     ds3615xs) PLATFORM="bromolow_3.10.108" ;;
